@@ -1,12 +1,12 @@
 {
-  "actualizado": "2026-11-02T06:50:00-05:00",
+  "actualizado": "2026-11-02T12:01:54.691Z",
   "items": [
     {
       "titulo": "Siemplea, el proyecto digital para buscar empleo, que el Gobierno Petro no sacó adelante y que hoy está bajo la lupa",
       "enlace": "https://www.las2orillas.co/siemplea-el-proyecto-digital-para-buscar-empleo-que-el-gobierno-petro-no-saco-adelante-y-que-hoy-esta-bajo-la-lupa/",
       "fuente": "Las2orillas",
       "fecha": "2026-10-23T08:00:00-05:00",
-      "imagen": "",
+      "imagen": "http://www.bing.com/th?id=ONUT.foBeYhykLMlYy0n6izXqtw&pid=News",
       "resumen": "Se estructuró en el Gobierno Duque, se desarrolló con Sanguino como ministro y hoy MinTrabajo la cataloga como elefante blanco."
     },
     {
@@ -14,7 +14,7 @@
       "enlace": "https://hsbnoticias.com/noticias/gobierno-denuncia-elefante-blanco-de-us-25-millones-en-plataforma-de-mintrabajo",
       "fuente": "HSB Noticias",
       "fecha": "2026-10-22T07:00:00-05:00",
-      "imagen": "",
+      "imagen": "http://localhost:3000/uploads/articles/43b299a9-eb76-47fc-989a-9bfb1d2286c0.webp",
       "resumen": "Denuncia ante Fiscalía, Procuraduría y Contraloría por Siemplea y CualifiCO, financiadas con el préstamo del BID."
     },
     {
@@ -22,8 +22,16 @@
       "enlace": "https://www.eltiempo.com/unidad-investigativa/gobierno-de-la-espriella-instaura-denuncia-por-elefante-blanco-tecnologico-en-mintrabajo-heredado-de-la-era-petro-y-financiado-con-prestamo-del-bid-3595302",
       "fuente": "El Tiempo",
       "fecha": "2026-10-21T16:46:00-05:00",
-      "imagen": "",
+      "imagen": "http://www.bing.com/th?id=ONUT.RJdwIDXK6G76Hvks975CGw&pid=News",
       "resumen": "El secretario general de MinTrabajo, Eduardo Pineda Arrieta, radicó la denuncia. Sanguino dice que solo le tocó el cierre y que todo se validó con el BID."
+    },
+    {
+      "titulo": "Así puedes encontrar trabajo paso a paso con Siemplea, la nueva plataforma del Gobierno",
+      "enlace": "https://lakalle.bluradio.com/sociedad/informacion-de-servicio/asi-puedes-encontrar-trabajo-paso-a-paso-con-siemplea-la-nueva-plataforma-del-gobierno-so35",
+      "fuente": "La Kalle",
+      "fecha": "2025-12-22T08:00:00.000Z",
+      "imagen": "https://caracoltv.brightspotcdn.com/dims4/default/8d8e067/2147483647/strip/true/crop/1280x720+0+0/resize/1280x720!/format/webp/quality/75/?url=https%3A%2F%2Fcaracol-brightspot.s3.us-west-2.amazonaws.com%2Ffc%2F58%2Fd8cff2a748418127664e8f8591ab%2Fbefunky-design-20.jpg",
+      "resumen": "De acuerdo con el Ministerio de Trabajo, Siemplea es la primera herramienta completamente pública en Colombia dedicada a la información y gestión del empleo, administrada por el Servicio Público de ..."
     },
     {
       "titulo": "Siemplea: la nueva plataforma gratuita que usará IA para facilitar el acceso al empleo",
@@ -38,10 +46,31 @@
       "enlace": "https://actualicese.com/gobierno-nacional-presento-siemplea-la-nueva-plataforma-en-la-era-del-empleo-digital/",
       "fuente": "Actualícese",
       "fecha": "2025-07-30T08:00:00-05:00",
-      "imagen": "",
+      "imagen": "https://actualicese.com/wp-content/uploads/2022/09/MicrosoftTeams-image-5-e1663965818368.png",
       "resumen": "El ministro Sanguino presentó el motor de emparejamiento con inteligencia artificial."
+    },
+    {
+      "titulo": "Colombia lanza Siemplea, nueva plataforma de empleo basada en inteligencia artificial",
+      "enlace": "https://www.agenciapi.co/noticia/empresas/colombia-lanza-siemplea-nueva-plataforma-de-empleo-basada-en-inteligencia-artificial",
+      "fuente": "agenciapi",
+      "fecha": "2025-07-29T13:32:00.000Z",
+      "imagen": "https://www.agenciapi.co/sites/default/files/2025-07/Siemplea.jpg",
+      "resumen": "El nuevo sistema del Servicio Público de Empleo estará disponible a partir del último trimestre de 2025 y busca transformar la empleabilidad en el país. Durante el Encuentro Nacional de Prestadores ..."
+    },
+    {
+      "titulo": "Ministerio del trabajo presentó una nueva plataforma pública de empleo, impulsada por la IA",
+      "enlace": "https://caracol.com.co/2025/07/29/ministerio-del-trabajo-presento-una-nueva-plataforma-publica-de-empleo-impulsada-por-la-ia/",
+      "fuente": "Caracol Radio",
+      "fecha": "2025-07-29T10:07:00.000Z",
+      "imagen": "https://caracol.com.co/resizer/v2/VPOAETEJ6FCTVKIVTV2ASDDJLI.jpeg?auth=ee73137cbd1cb76a32dc3fb02da1d4772ca8dbe28debe8cc822d8a00be8b9d2d&quality=70&width=1200&height=675&smart=true",
+      "resumen": "En el Encuentro Nacional de Prestadores del Servicio Público de Empleo, realizado en Cali, el ministro de Trabajo, Antonio Sanguino, presentó oficialmente Siemplea, la nueva plataforma pública de ..."
     }
   ],
   "videos": [],
-  "fotos": {}
+  "fotos": {
+    "bid": "https://upload.wikimedia.org/wikipedia/commons/6/68/1300_NY_Ave_IDB_DCA_07_2018_9880.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "mintrabajo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Logo_Ministerio_del_Trabajo_Colombia.svg/langes-960px-Logo_Ministerio_del_Trabajo_Colombia.svg.png?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
+    "fiscalia": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Fiscalia_Colombia_4.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
+    "bogota": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Museo-del-Oro-Fachada_%2827842494739%29.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled"
+  }
 }
