@@ -360,7 +360,7 @@ footer a{color:var(--oro)}
   <div class="contenedor">
     <div class="kicker" data-t="a-k">Usted también puede</div>
     <h2 data-t="a-t">Pida cuentas con un derecho de petición</h2>
-    <p style="margin-bottom:18px;max-width:760px" data-t="a-p">Escriba sus datos y la app arma la carta. Radíquela en el canal de PQRSD del Ministerio del Trabajo (mintrabajo.gov.co). Por ley (Ley 1755 de 2015) deben responder en 15 días hábiles, y en 10 días hábiles si lo que pide son documentos.</p>
+    <p style="margin-bottom:18px;max-width:760px" data-t="a-p">Escriba sus datos y toque Enviar por correo: se abre su correo con la carta lista para el Ministerio del Trabajo (solucionesdocumentales@mintrabajo.gov.co). Guarde la respuesta automática con el número de radicado. Por ley (Ley 1755 de 2015) deben responder en 15 días hábiles, y en 10 días hábiles si lo que pide son documentos.</p>
     <div class="peticion">
       <div class="form">
         <label data-t="f-nombre">Nombre completo</label><input id="p-nombre" autocomplete="name">
@@ -368,7 +368,8 @@ footer a{color:var(--oro)}
         <label data-t="f-ciudad">Ciudad</label><input id="p-ciudad" value="Caucasia, Antioquia">
         <label data-t="f-correo">Correo para la respuesta</label><input id="p-correo" type="email" autocomplete="email">
         <div class="acciones">
-          <button class="btn btn-rojo" id="btn-copiar" data-t="copiar">Copiar carta</button>
+          <button class="btn btn-rojo" id="btn-correo" data-t="correo">Enviar por correo</button>
+          <button class="btn btn-borde" id="btn-copiar" data-t="copiar" style="color:var(--navy);border-color:var(--navy)">Copiar carta</button>
           <a class="btn btn-oro" href="https://www.mintrabajo.gov.co/" target="_blank" rel="noopener" data-t="ir">Ir a MinTrabajo</a>
         </div>
       </div>
@@ -435,8 +436,8 @@ const T = {
   "n-k":"Archive", "n-t":"Every news story on the case",
   "g-k":"Plain words", "g-t":"Key terms, made simple",
   "a-k":"You can act too", "a-t":"Demand answers with a right-of-petition letter",
-  "a-p":"Fill in your details and the app writes the letter (in Spanish, as required). File it through the Labor Ministry's PQRSD channel (mintrabajo.gov.co). By law (Law 1755 of 2015) they must answer within 15 business days, or 10 business days for document requests.",
-  "f-nombre":"Full name", "f-cc":"ID number (cédula)", "f-ciudad":"City", "f-correo":"Email for the reply", copiar:"Copy letter", ir:"Go to MinTrabajo",
+  "a-p":"Fill in your details and tap Send by email: your mail app opens with the letter (in Spanish) addressed to the Labor Ministry (solucionesdocumentales@mintrabajo.gov.co). Keep the automatic reply with your filing number. By law (Law 1755 of 2015) they must answer within 15 business days, or 10 business days for document requests.",
+  "f-nombre":"Full name", "f-cc":"ID number (cédula)", "f-ciudad":"City", "f-correo":"Email for the reply", copiar:"Copy letter", correo:"Send by email", ir:"Go to MinTrabajo",
   "fu-k":"Sources", "fu-t":"Where this information comes from",
   robot:"News updates itself every 30 minutes with a robot that searches Google News, Bing News and YouTube.",
   pie:"a citizen app by", pie2:"Public information with sources. Not affiliated with the IDB, the Labor Ministry or any party.",
@@ -445,8 +446,8 @@ const T = {
  }
 };
 const M = {
- es:{hoyNada:"Hoy todavía no sale nada nuevo del caso. Esto es lo más reciente:", hoyHay:n=>`${n} noticia${n>1?"s":""} del caso hoy`, actual:"Actualizado", vivo:"Búsqueda en vivo", vivoOk:n=>n?`${n} resultado${n>1?"s":""} nuevo${n>1?"s":""} en vivo`:"Sin novedades en vivo", vivoMal:"Búsqueda en vivo no disponible ahora", robotT:"Robot", nuevo:"NUEVO", sinVideos:"El robot todavía no ha encontrado videos del caso. Apenas aparezcan, salen aquí solos.", sinRes:"No hay noticias con esa palabra.", copiado:"Carta copiada. Péguela en el formulario de MinTrabajo.", actualizando:"Buscando noticias nuevas…", listo:"Listo, todo al día.", hoy:"Hoy", hace:"hace", min:"min", h:"h", dias:"d"},
- en:{hoyNada:"Nothing new on the case yet today. Here is the latest:", hoyHay:n=>`${n} stor${n>1?"ies":"y"} on the case today`, actual:"Updated", vivo:"Live search", vivoOk:n=>n?`${n} new live result${n>1?"s":""}`:"No live news", vivoMal:"Live search unavailable right now", robotT:"Robot", nuevo:"NEW", sinVideos:"The robot hasn't found videos of the case yet. They'll show up here automatically.", sinRes:"No news with that word.", copiado:"Letter copied. Paste it into the MinTrabajo form.", actualizando:"Looking for new stories…", listo:"Done, all up to date.", hoy:"Today", hace:"", min:"min ago", h:"h ago", dias:"d ago"}
+ es:{hoyNada:"Hoy todavía no sale nada nuevo del caso. Esto es lo más reciente:", hoyHay:n=>`${n} noticia${n>1?"s":""} del caso hoy`, actual:"Actualizado", vivo:"Búsqueda en vivo", vivoOk:n=>n?`${n} resultado${n>1?"s":""} nuevo${n>1?"s":""} en vivo`:"Sin novedades en vivo", vivoMal:"Búsqueda en vivo no disponible ahora", robotT:"Robot", nuevo:"NUEVO", sinVideos:"El robot todavía no ha encontrado videos del caso. Apenas aparezcan, salen aquí solos.", sinRes:"No hay noticias con esa palabra.", copiado:"Carta copiada. Péguela en el formulario de MinTrabajo.", faltan:"Escriba su nombre y su cédula antes de enviar.", abriendo:"Abriendo su correo con la carta lista. Solo toque Enviar.", actualizando:"Buscando noticias nuevas…", listo:"Listo, todo al día.", hoy:"Hoy", hace:"hace", min:"min", h:"h", dias:"d"},
+ en:{hoyNada:"Nothing new on the case yet today. Here is the latest:", hoyHay:n=>`${n} stor${n>1?"ies":"y"} on the case today`, actual:"Updated", vivo:"Live search", vivoOk:n=>n?`${n} new live result${n>1?"s":""}`:"No live news", vivoMal:"Live search unavailable right now", robotT:"Robot", nuevo:"NEW", sinVideos:"The robot hasn't found videos of the case yet. They'll show up here automatically.", sinRes:"No news with that word.", copiado:"Letter copied. Paste it into the MinTrabajo form.", faltan:"Enter your name and ID number before sending.", abriendo:"Opening your email with the letter ready. Just tap Send.", actualizando:"Looking for new stories…", listo:"Done, all up to date.", hoy:"Today", hace:"", min:"min ago", h:"h ago", dias:"d ago"}
 };
 const L = (es,en)=>({es,en});
 
@@ -734,6 +735,15 @@ $("#btn-copiar").addEventListener("click",async()=>{
   carta(); const tx=$("#texto-peticion").value;
   try{await navigator.clipboard.writeText(tx)}catch(e){$("#texto-peticion").select();document.execCommand("copy")}
   aviso(M[idioma].copiado);
+});
+
+$("#btn-correo").addEventListener("click",()=>{
+  if(!$("#p-nombre").value.trim()||!$("#p-cc").value.trim()){aviso(M[idioma].faltan);($("#p-nombre").value.trim()?$("#p-cc"):$("#p-nombre")).focus();return}
+  carta();
+  const para="solucionesdocumentales@mintrabajo.gov.co", cc="notificacionesjudiciales@mintrabajo.gov.co";
+  const asunto="Derecho de petición de información - Préstamo BID 4934/OC-CO, Siemplea y CualifiCO";
+  aviso(M[idioma].abriendo);
+  location.href=`mailto:${para}?cc=${cc}&subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent($("#texto-peticion").value)}`;
 });
 
 /* ---------- Botones ---------- */
