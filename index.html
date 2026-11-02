@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Préstamo BID al Día — Seguimiento ciudadano | Vibras Positivas HM</title>
+<meta name="description" content="Seguimiento ciudadano al préstamo del BID del Ministerio del Trabajo (Siemplea y CualifiCO, US$25 millones). Noticias reales cada 30 minutos.">
+<meta name="theme-color" content="#0a1633">
+<meta property="og:title" content="Préstamo BID al Día — ¿Dónde quedó la plata?">
+<meta property="og:description" content="US$20 millones del BID + US$5,1 millones de cooperación para Siemplea y CualifiCO. Hoy, denunciados ante la Fiscalía. Seguimiento día a día.">
+<meta property="og:type" content="website">
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0a1633; --navy2:#10224d; --azul:#1d4ed8; --cielo:#38bdf8;
+  --oro:#f5b301; --rojo:#e11d2e; --verde:#16a34a;
+  --blanco:#f8fafc; --gris:#94a3b8; --tinta:#0f172a; --papel:#eef2f8;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--papel);color:var(--tinta);line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{display:block;max-width:100%}
+.contenedor{max-width:1100px;margin:0 auto;padding:0 18px}
+
+/* Barra superior */
+.barra{position:sticky;top:0;z-index:50;background:rgba(10,22,51,.92);backdrop-filter:blur(10px);color:#fff;border-bottom:3px solid var(--oro)}
+.barra .contenedor{display:flex;align-items:center;gap:10px;height:58px}
+.marca{font-family:"Archivo Black",sans-serif;font-size:17px;letter-spacing:.3px;flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.marca b{color:var(--oro)}
+.btn{text-decoration:none;display:inline-block;font:800 13px Inter,sans-serif;border:0;border-radius:999px;padding:9px 15px;cursor:pointer;letter-spacing:.3px;transition:transform .15s,background .2s}
+.btn:active{transform:scale(.95)}
+.btn-oro{background:var(--oro);color:var(--navy)}
+.btn-borde{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.45)}
+.btn-rojo{background:var(--rojo);color:#fff}
+.girando{animation:pulso 1s infinite}
+@keyframes pulso{50%{opacity:.55}}
+
+/* Ticker */
+.ticker{background:var(--rojo);color:#fff;overflow:hidden;white-space:nowrap;font-weight:800;font-size:13px}
+.ticker .etq{display:inline-block;background:var(--navy);padding:8px 12px;position:relative;z-index:2;letter-spacing:1px}
+.ticker .pista{display:inline-block;padding-left:100%;animation:correr 70s linear infinite}
+.ticker .pista span{margin-right:48px}
+.ticker-wrap{display:flex}
+.ticker-wrap > div{overflow:hidden;flex:1;padding:8px 0}
+@keyframes correr{to{transform:translateX(-100%)}}
+
+/* Portada */
+.portada{position:relative;min-height:88vh;color:#fff;overflow:hidden;display:flex;align-items:flex-end;background:var(--navy)}
+.portada .foto{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.6s;animation:kenburns 24s ease-in-out infinite alternate}
+.portada .foto.activa{opacity:.55}
+@keyframes kenburns{from{transform:scale(1.04) translate(0,0)}to{transform:scale(1.18) translate(-2%,-2%)}}
+.portada::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,22,51,.35) 0%,rgba(10,22,51,.75) 55%,var(--navy) 100%)}
+.portada .malla{position:absolute;inset:0;background:radial-gradient(circle at 80% 20%,rgba(56,189,248,.35),transparent 45%),radial-gradient(circle at 10% 90%,rgba(225,29,46,.3),transparent 40%)}
+.portada .contenedor{position:relative;z-index:2;padding-top:60px;padding-bottom:46px;width:100%}
+.sello{display:inline-flex;gap:10px;align-items:center;font-weight:800;font-size:12px;letter-spacing:2px;text-transform:uppercase}
+.sello .vivo{background:var(--rojo);padding:5px 10px;border-radius:4px;animation:latido 1.6s infinite}
+@keyframes latido{50%{box-shadow:0 0 0 8px rgba(225,29,46,0)}0%{box-shadow:0 0 0 0 rgba(225,29,46,.7)}}
+h1{font-family:"Archivo Black",sans-serif;font-size:clamp(34px,7vw,72px);line-height:1.02;margin:16px 0 14px;text-transform:uppercase;letter-spacing:-.5px}
+h1 em{font-style:normal;color:var(--oro)}
+.bajada{font-size:clamp(16px,2.3vw,20px);max-width:720px;color:#dbe4f5}
+.cifras{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:30px}
+.cifra{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);border-radius:16px;padding:16px;backdrop-filter:blur(6px);transform:translateY(20px);opacity:0;animation:subir .8s forwards}
+.cifra:nth-child(2){animation-delay:.12s}.cifra:nth-child(3){animation-delay:.24s}.cifra:nth-child(4){animation-delay:.36s}
+@keyframes subir{to{transform:none;opacity:1}}
+.cifra .num{font-family:"Archivo Black",sans-serif;font-size:clamp(24px,4vw,38px);color:var(--oro);line-height:1}
+.cifra .txt{font-size:13px;color:#cbd5e1;margin-top:6px}
+.acciones{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+
+/* Secciones */
+section{padding:56px 0}
+.kicker{font-weight:800;font-size:12px;letter-spacing:2.5px;text-transform:uppercase;color:var(--rojo)}
+h2{font-family:"Archivo Black",sans-serif;font-size:clamp(26px,4.5vw,40px);line-height:1.08;margin:6px 0 18px;text-transform:uppercase;color:var(--navy)}
+.oscura{background:var(--navy);color:#fff}
+.oscura h2{color:#fff}
+.oscura .kicker{color:var(--oro)}
+.nota{font-size:13px;color:var(--gris)}
+
+/* Hoy */
+.hoy{background:linear-gradient(135deg,#fff 0%,#e6edfb 100%);border-bottom:1px solid #d5deef}
+.hoy-cab{display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap}
+.reloj{font-family:"Archivo Black",sans-serif;font-size:15px;color:var(--navy);background:#fff;border:2px solid var(--navy);border-radius:10px;padding:8px 12px}
+.estado{margin:14px 0 22px;font-weight:600;color:#334155;display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.chip{font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase;padding:4px 9px;border-radius:999px;background:var(--navy);color:#fff}
+.chip.rojo{background:var(--rojo)}.chip.verde{background:var(--verde)}.chip.oro{background:var(--oro);color:var(--navy)}
+.contador-dias{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:26px}
+.dia{background:var(--navy);color:#fff;border-radius:16px;padding:16px;position:relative;overflow:hidden}
+.dia::before{content:"";position:absolute;right:-40px;top:-40px;width:80px;height:80px;border-radius:50%;background:rgba(245,179,1,.14)}
+.dia .num{font-family:"Archivo Black",sans-serif;font-size:34px;color:var(--oro);line-height:1}
+.dia .txt{font-size:13px;color:#cbd5e1;margin-top:6px}
+
+/* Tarjetas de noticias */
+.rejilla{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.tarjeta{background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 8px 24px rgba(15,23,42,.08);display:flex;flex-direction:column;text-decoration:none;transition:transform .25s,box-shadow .25s;opacity:0;transform:translateY(16px)}
+.tarjeta.visible{opacity:1;transform:none}
+.tarjeta:hover{transform:translateY(-4px);box-shadow:0 16px 36px rgba(15,23,42,.16)}
+.tarjeta .img{aspect-ratio:16/9;background:var(--navy2) center/cover no-repeat;position:relative;overflow:hidden}
+.tarjeta .img.sin{display:flex;align-items:flex-end;padding:14px;background:repeating-linear-gradient(135deg,rgba(255,255,255,.04) 0 14px,transparent 14px 28px),linear-gradient(135deg,var(--navy) 0%,var(--azul) 70%,var(--rojo) 130%)}
+.tarjeta .img.sin span{font-family:"Archivo Black",sans-serif;color:rgba(255,255,255,.9);font-size:22px;text-transform:uppercase;line-height:1}
+.tarjeta .img .fuente{position:absolute;left:10px;top:10px;background:rgba(10,22,51,.85);color:#fff;font-size:11px;font-weight:800;padding:4px 8px;border-radius:6px;letter-spacing:.5px}
+.tarjeta .img .nuevo{position:absolute;right:10px;top:10px;background:var(--rojo);color:#fff;font-size:11px;font-weight:800;padding:4px 8px;border-radius:6px}
+.tarjeta .cuerpo{padding:14px 16px 18px;display:flex;flex-direction:column;gap:8px;flex:1}
+.tarjeta h3{font-size:16px;line-height:1.3;color:var(--navy)}
+.tarjeta p{font-size:14px;color:#475569}
+.tarjeta .fecha{font-size:12px;color:var(--gris);font-weight:600;margin-top:auto}
+.tarjeta.grande{grid-column:span 2}
+.tarjeta.grande h3{font-size:21px}
+
+/* Resumen */
+.resumen-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:30px;align-items:center}
+.resumen-grid p{font-size:17px;margin-bottom:14px}
+.foto-marco{border-radius:22px;overflow:hidden;aspect-ratio:4/3;background:var(--navy) center/cover;box-shadow:0 20px 50px rgba(10,22,51,.35);position:relative}
+.foto-marco .pie{position:absolute;left:0;right:0;bottom:0;padding:12px 14px;background:linear-gradient(transparent,rgba(10,22,51,.9));color:#fff;font-size:12px}
+.aclaracion{background:#fff7dc;border-left:5px solid var(--oro);padding:14px 16px;border-radius:10px;font-size:15px;margin-top:8px}
+
+/* Línea de tiempo */
+.linea{position:relative;margin-top:10px}
+.linea::before{content:"";position:absolute;left:14px;top:0;bottom:0;width:3px;background:linear-gradient(var(--oro),var(--rojo))}
+.hito{position:relative;padding:0 0 26px 48px;opacity:0;transform:translateX(-14px);transition:.6s}
+.hito.visible{opacity:1;transform:none}
+.hito::before{content:"";position:absolute;left:6px;top:4px;width:19px;height:19px;border-radius:50%;background:var(--navy);border:4px solid var(--oro)}
+.hito.clave::before{border-color:var(--rojo);background:var(--rojo)}
+.hito .f{font-weight:800;font-size:13px;color:var(--oro);letter-spacing:1px;text-transform:uppercase}
+.hito h4{font-size:18px;margin:2px 0 4px}
+.hito p{color:#cbd5e1;font-size:15px}
+
+/* Dos lados */
+.lados{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.lado{border-radius:20px;padding:24px;background:#fff;box-shadow:0 8px 24px rgba(15,23,42,.07)}
+.lado.acusa{border-top:6px solid var(--rojo)}
+.lado.defensa{border-top:6px solid var(--azul)}
+.lado h3{font-family:"Archivo Black",sans-serif;text-transform:uppercase;font-size:18px;margin-bottom:12px;color:var(--navy)}
+.lado ul{list-style:none;display:flex;flex-direction:column;gap:10px}
+.lado li{padding-left:16px;position:relative;font-size:15px}
+.lado li::before{content:"";position:absolute;left:0;top:9px;width:7px;height:7px;border-radius:2px;background:var(--rojo)}
+.lado.defensa li::before{background:var(--azul)}
+.presuncion{margin-top:18px;font-size:14px;color:#475569;background:#fff;border-radius:12px;padding:12px 14px;border:1px dashed #94a3b8}
+
+/* Barras de plata */
+.barras{display:flex;flex-direction:column;gap:16px;margin-top:10px}
+.barra-plata .rot{display:flex;justify-content:space-between;font-weight:700;font-size:15px;margin-bottom:6px}
+.barra-plata .fondo{height:26px;background:rgba(255,255,255,.12);border-radius:999px;overflow:hidden}
+.barra-plata .lleno{height:100%;width:0;border-radius:999px;transition:width 1.8s cubic-bezier(.2,.8,.2,1)}
+.codigos{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:26px}
+.codigo{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:14px;padding:14px}
+.codigo b{display:block;font-family:"Archivo Black",sans-serif;color:var(--oro);font-size:17px}
+.codigo span{font-size:13px;color:#cbd5e1}
+
+/* Vigilar */
+.vigilar{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.pendiente{background:#fff;border-radius:16px;padding:18px;display:flex;gap:14px;align-items:flex-start;box-shadow:0 6px 18px rgba(15,23,42,.06)}
+.pendiente .n{font-family:"Archivo Black",sans-serif;font-size:26px;color:var(--rojo);line-height:1;min-width:34px}
+.pendiente h4{font-size:16px;color:var(--navy);margin-bottom:4px}
+.pendiente p{font-size:14px;color:#475569}
+
+/* Glosario */
+.glosario{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.termino{border-radius:16px;padding:18px;background:linear-gradient(135deg,var(--navy2),var(--navy));color:#fff}
+.termino b{font-family:"Archivo Black",sans-serif;color:var(--oro);text-transform:uppercase;font-size:15px;display:block;margin-bottom:6px}
+.termino p{font-size:14px;color:#dbe4f5}
+
+/* Petición */
+.peticion{display:grid;grid-template-columns:.9fr 1.1fr;gap:22px}
+.form label{display:block;font-weight:700;font-size:13px;margin:10px 0 4px;color:var(--navy)}
+.form input{width:100%;padding:12px;border-radius:10px;border:2px solid #cbd5e1;font:15px Inter,sans-serif}
+.form input:focus{outline:none;border-color:var(--azul)}
+textarea#texto-peticion{width:100%;min-height:420px;padding:16px;border-radius:14px;border:2px solid #cbd5e1;font:14px/1.55 Inter,sans-serif;background:#fff;resize:vertical}
+
+/* Buscador */
+.buscador{display:flex;gap:10px;margin-bottom:20px}
+.buscador input{flex:1;padding:14px 16px;border-radius:999px;border:2px solid #cbd5e1;font:16px Inter,sans-serif}
+.buscador input:focus{outline:none;border-color:var(--azul)}
+
+/* Videos */
+.videos{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.video{border-radius:16px;overflow:hidden;background:#000;aspect-ratio:16/9;position:relative;cursor:pointer}
+.video img{width:100%;height:100%;object-fit:cover;opacity:.85;transition:.3s}
+.video:hover img{opacity:1;transform:scale(1.04)}
+.video .t{position:absolute;left:0;right:0;bottom:0;padding:10px 12px;background:linear-gradient(transparent,rgba(0,0,0,.9));color:#fff;font-size:13px;font-weight:700}
+.video .play{position:absolute;inset:0;margin:auto;width:64px;height:44px;border-radius:12px;background:var(--rojo)}
+.video .play::after{content:"";position:absolute;left:26px;top:13px;border-left:16px solid #fff;border-top:9px solid transparent;border-bottom:9px solid transparent}
+.video iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vacio{background:#fff;border-radius:16px;padding:22px;color:#475569;font-size:15px}
+.oscura .vacio{background:rgba(255,255,255,.07);color:#cbd5e1}
+
+/* Fuentes y pie */
+.fuentes li{margin:8px 0 8px 18px;font-size:15px}
+footer{background:#050c1f;color:#94a3b8;padding:36px 0;font-size:14px}
+footer b{color:#fff}
+footer a{color:var(--oro)}
+.anuncio{display:block;margin-top:16px;padding:16px;border-radius:14px;background:linear-gradient(90deg,var(--oro),#ffd75e);color:var(--navy);text-decoration:none;font-weight:800}
+
+.aviso-flotante{position:fixed;left:50%;bottom:22px;transform:translate(-50%,120px);background:var(--navy);color:#fff;padding:12px 18px;border-radius:999px;font-weight:700;font-size:14px;z-index:99;transition:transform .35s;box-shadow:0 10px 30px rgba(0,0,0,.3);border:2px solid var(--oro);max-width:92vw;text-align:center}
+.aviso-flotante.ver{transform:translate(-50%,0)}
+
+@media (max-width:860px){
+  .rejilla,.videos{grid-template-columns:1fr 1fr}
+  .tarjeta.grande{grid-column:span 2}
+  .resumen-grid,.lados,.peticion{grid-template-columns:1fr}
+  .cifras{grid-template-columns:1fr 1fr}
+  .codigos{grid-template-columns:1fr}
+}
+@media (max-width:560px){
+  .rejilla,.videos,.vigilar,.glosario{grid-template-columns:1fr}
+  .tarjeta.grande{grid-column:auto}
+  .contador-dias{grid-template-columns:1fr 1fr 1fr;gap:8px}
+  .dia{padding:12px}.dia .num{font-size:26px}.dia .txt{font-size:11px}
+  .marca{font-size:14px}
+  .btn{padding:8px 12px;font-size:12px}
+  section{padding:44px 0}
+}
+</style>
+</head>
+<body>
+
+<header class="barra">
+  <div class="contenedor">
+    <div class="marca">PRÉSTAMO <b>BID</b> AL DÍA</div>
+    <button class="btn btn-oro" id="btn-actualizar" data-t="actualizar">Actualizar</button>
+    <button class="btn btn-borde" id="btn-idioma">EN</button>
+  </div>
+</header>
+
+<div class="ticker">
+  <div class="ticker-wrap">
+    <span class="etq" data-t="ultima">ÚLTIMA HORA</span>
+    <div><div class="pista" id="pista"><span>Cargando titulares del caso…</span></div></div>
+  </div>
+</div>
+
+<section class="portada" id="inicio">
+  <div class="malla"></div>
+  <div class="foto" id="foto1"></div>
+  <div class="foto" id="foto2"></div>
+  <div class="contenedor">
+    <div class="sello"><span class="vivo" data-t="envivo">EN VIVO</span><span data-t="sello">Seguimiento ciudadano · Vibras Positivas HM</span></div>
+    <h1 data-t="titulo">¿Dónde quedó la plata del <em>préstamo del BID?</em></h1>
+    <p class="bajada" data-t="bajada">US$20 millones prestados por el BID y US$5,1 millones regalados en cooperación para modernizar el empleo público. El resultado, según el Ministerio del Trabajo de hoy: plataformas que no funcionan. Ya está denunciado ante la Fiscalía.</p>
+    <div class="cifras">
+      <div class="cifra"><div class="num" data-contar="20" data-pre="US$" data-suf="M">US$0M</div><div class="txt" data-t="c1">Préstamo BID 4934/OC-CO</div></div>
+      <div class="cifra"><div class="num" data-contar="5.125" data-pre="US$" data-suf="M" data-dec="3">US$0M</div><div class="txt" data-t="c2">Cooperación no reembolsable</div></div>
+      <div class="cifra"><div class="num" data-contar="2">0</div><div class="txt" data-t="c3">Plataformas cuestionadas: Siemplea y CualifiCO</div></div>
+      <div class="cifra"><div class="num" data-contar="3">0</div><div class="txt" data-t="c4">Entes con la denuncia: Fiscalía, Procuraduría y Contraloría</div></div>
+    </div>
+    <div class="acciones">
+      <a class="btn btn-oro" href="#hoy" data-t="verhoy">Ver lo de hoy</a>
+      <a class="btn btn-rojo" href="#actue" data-t="pedir">Pedir cuentas</a>
+      <button class="btn btn-borde" id="btn-compartir" data-t="compartir">Compartir</button>
+    </div>
+  </div>
+</section>
+
+<section class="hoy" id="hoy">
+  <div class="contenedor">
+    <div class="hoy-cab">
+      <div>
+        <div class="kicker" data-t="hoyk">Hoy en el caso</div>
+        <h2 id="hoy-fecha">Hoy</h2>
+      </div>
+      <div class="reloj" id="reloj">--:--</div>
+    </div>
+    <div class="estado" id="estado"><span class="chip" data-t="cargando">Cargando</span></div>
+    <div class="contador-dias">
+      <div class="dia"><div class="num" id="d-denuncia">0</div><div class="txt" data-t="d1">días desde la denuncia (21 oct 2026)</div></div>
+      <div class="dia"><div class="num" id="d-resolucion">0</div><div class="txt" data-t="d2">días desde la resolución de Sanguino (6 ago 2026)</div></div>
+      <div class="dia"><div class="num" id="d-cierre">0</div><div class="txt" data-t="d3">días desde que se cerró el programa (30 mar 2026)</div></div>
+    </div>
+    <div class="rejilla" id="hoy-lista"></div>
+  </div>
+</section>
+
+<section id="resumen">
+  <div class="contenedor resumen-grid">
+    <div>
+      <div class="kicker" data-t="r-k">El caso en un minuto</div>
+      <h2 data-t="r-t">Un préstamo, dos plataformas y una firma de último día</h2>
+      <div id="resumen-texto"></div>
+      <div class="aclaracion" data-t="aclara">En redes el caso circula como "Sambino". El exministro es Antonio Sanguino, ministro del Trabajo del gobierno Petro entre febrero de 2025 y agosto de 2026.</div>
+    </div>
+    <div class="foto-marco" id="foto-resumen"><div class="pie" id="pie-resumen">Banco Interamericano de Desarrollo</div></div>
+  </div>
+</section>
+
+<section class="oscura" id="linea">
+  <div class="contenedor">
+    <div class="kicker" data-t="l-k">Línea de tiempo</div>
+    <h2 data-t="l-t">De 2019 a la denuncia</h2>
+    <div class="linea" id="linea-lista"></div>
+  </div>
+</section>
+
+<section id="lados">
+  <div class="contenedor">
+    <div class="kicker" data-t="la-k">Las dos versiones</div>
+    <h2 data-t="la-t">Lo que denuncian y lo que responde Sanguino</h2>
+    <div class="lados">
+      <div class="lado acusa"><h3 data-t="acusa">La denuncia</h3><ul id="lista-acusa"></ul></div>
+      <div class="lado defensa"><h3 data-t="defiende">La defensa</h3><ul id="lista-defensa"></ul></div>
+    </div>
+    <p class="presuncion" data-t="presuncion">Una denuncia no es una condena. Todas las personas mencionadas se presumen inocentes hasta que un juez diga lo contrario. Esta app hace seguimiento a lo que es público y le recuerda a cada entidad lo que tiene pendiente.</p>
+  </div>
+</section>
+
+<section class="oscura" id="plata">
+  <div class="contenedor">
+    <div class="kicker" data-t="p-k">La plata</div>
+    <h2 data-t="p-t">US$25,1 millones, por partes</h2>
+    <div class="barras">
+      <div class="barra-plata"><div class="rot"><span data-t="b1">Préstamo BID (se paga con intereses)</span><span>US$20.000.000</span></div><div class="fondo"><div class="lleno" data-ancho="79.6" style="background:linear-gradient(90deg,var(--rojo),var(--oro))"></div></div></div>
+      <div class="barra-plata"><div class="rot"><span data-t="b2">Cooperación no reembolsable</span><span>US$5.125.000</span></div><div class="fondo"><div class="lleno" data-ancho="20.4" style="background:linear-gradient(90deg,var(--azul),var(--cielo))"></div></div></div>
+    </div>
+    <div class="codigos">
+      <div class="codigo"><b>4934/OC-CO</b><span data-t="k1">Contrato de préstamo con el BID — Programa para Fortalecer Políticas de Empleo</span></div>
+      <div class="codigo"><b>4935/GR-CO</b><span data-t="k2">Convenio de financiamiento no reembolsable</span></div>
+      <div class="codigo"><b>GRT/CF-17823-CO</b><span data-t="k3">Convenio de financiamiento no reembolsable</span></div>
+    </div>
+    <p class="nota" style="margin-top:16px" data-t="p-nota">Con esos códigos cualquier ciudadano puede pedir información al Ministerio del Trabajo, al Ministerio de Hacienda y al BID.</p>
+  </div>
+</section>
+
+<section id="vigilar">
+  <div class="contenedor">
+    <div class="kicker" data-t="v-k">Lo que falta saber</div>
+    <h2 data-t="v-t">Preguntas que siguen abiertas</h2>
+    <div class="vigilar" id="vigilar-lista"></div>
+  </div>
+</section>
+
+<section class="oscura" id="videos">
+  <div class="contenedor">
+    <div class="kicker" data-t="vi-k">Videos</div>
+    <h2 data-t="vi-t">El caso en video</h2>
+    <div class="videos" id="videos-lista"></div>
+  </div>
+</section>
+
+<section id="noticias">
+  <div class="contenedor">
+    <div class="kicker" data-t="n-k">Archivo</div>
+    <h2 data-t="n-t">Todas las noticias del caso</h2>
+    <div class="buscador"><input id="filtro" type="search" placeholder="Buscar: Siemplea, Fiscalía, Azure…" data-tp="filtro"></div>
+    <div class="rejilla" id="todas-lista"></div>
+  </div>
+</section>
+
+<section style="background:#fff" id="glosario">
+  <div class="contenedor">
+    <div class="kicker" data-t="g-k">Para entender</div>
+    <h2 data-t="g-t">Palabras del caso, en sencillo</h2>
+    <div class="glosario" id="glosario-lista"></div>
+  </div>
+</section>
+
+<section id="actue">
+  <div class="contenedor">
+    <div class="kicker" data-t="a-k">Usted también puede</div>
+    <h2 data-t="a-t">Pida cuentas con un derecho de petición</h2>
+    <p style="margin-bottom:18px;max-width:760px" data-t="a-p">Escriba sus datos y la app arma la carta. Radíquela en el canal de PQRSD del Ministerio del Trabajo (mintrabajo.gov.co). Por ley (Ley 1755 de 2015) deben responder en 15 días hábiles, y en 10 días hábiles si lo que pide son documentos.</p>
+    <div class="peticion">
+      <div class="form">
+        <label data-t="f-nombre">Nombre completo</label><input id="p-nombre" autocomplete="name">
+        <label data-t="f-cc">Cédula</label><input id="p-cc" inputmode="numeric">
+        <label data-t="f-ciudad">Ciudad</label><input id="p-ciudad" value="Caucasia, Antioquia">
+        <label data-t="f-correo">Correo para la respuesta</label><input id="p-correo" type="email" autocomplete="email">
+        <div class="acciones">
+          <button class="btn btn-rojo" id="btn-copiar" data-t="copiar">Copiar carta</button>
+          <a class="btn btn-oro" href="https://www.mintrabajo.gov.co/" target="_blank" rel="noopener" data-t="ir">Ir a MinTrabajo</a>
+        </div>
+      </div>
+      <textarea id="texto-peticion" readonly></textarea>
+    </div>
+  </div>
+</section>
+
+<section style="background:#fff" id="fuentes">
+  <div class="contenedor">
+    <div class="kicker" data-t="fu-k">Fuentes</div>
+    <h2 data-t="fu-t">De dónde sale esta información</h2>
+    <ul class="fuentes">
+      <li><a href="https://www.eltiempo.com/unidad-investigativa/gobierno-de-la-espriella-instaura-denuncia-por-elefante-blanco-tecnologico-en-mintrabajo-heredado-de-la-era-petro-y-financiado-con-prestamo-del-bid-3595302" target="_blank" rel="noopener">El Tiempo, Unidad Investigativa — 21 oct 2026</a></li>
+      <li><a href="https://hsbnoticias.com/noticias/gobierno-denuncia-elefante-blanco-de-us-25-millones-en-plataforma-de-mintrabajo" target="_blank" rel="noopener">HSB Noticias — denuncia por US$25 millones</a></li>
+      <li><a href="https://www.las2orillas.co/siemplea-el-proyecto-digital-para-buscar-empleo-que-el-gobierno-petro-no-saco-adelante-y-que-hoy-esta-bajo-la-lupa/" target="_blank" rel="noopener">Las2orillas — 23 oct 2026</a></li>
+      <li><a href="https://vlex.com.co/vid/resolucion-numero-0313-2020-839903116" target="_blank" rel="noopener">Resolución 0313 de 2020, MinHacienda — autoriza el empréstito de US$20 millones</a></li>
+      <li><a href="https://vlex.com.co/vid/resolucion-numero-2546-2021-876405215" target="_blank" rel="noopener">Resolución 2546 de 2021 — contrato 4934/OC-CO y convenios no reembolsables</a></li>
+      <li><a href="https://incp.org.co/publicaciones/infoincp-publicaciones/2025/08/siemplea-la-nueva-plataforma-gratuita-que-usara-ia-para-facilitar-el-acceso-al-empleo/" target="_blank" rel="noopener">INCP — presentación de Siemplea, julio 2025</a></li>
+    </ul>
+    <p class="nota" style="margin-top:12px" data-t="robot">Las noticias se actualizan solas cada 30 minutos con un robot que busca en Google Noticias, Bing Noticias y YouTube.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="contenedor">
+    <b>Préstamo BID al Día</b> — <span data-t="pie">una app ciudadana de</span> <b>Vibras Positivas HM</b>, Caucasia, Antioquia.<br>
+    <span data-t="pie2">Información pública con fuentes. Sin afiliación con el BID, el Ministerio del Trabajo ni ningún partido.</span>
+    <a class="anuncio" href="https://vibraspositivashm.com" target="_blank" rel="noopener" data-t="anuncio">¿Su negocio necesita una app como esta? Vibras Positivas HM la hace. vibraspositivashm.com — 311 770 0431</a>
+    <p style="margin-top:14px" id="pie-actualizado"></p>
+  </div>
+</footer>
+
+<div class="aviso-flotante" id="aviso"></div>
+
+<script>
+const TZ = "America/Bogota";
+let idioma = (()=>{try{return localStorage.getItem("idioma")||"es"}catch(e){return "es"}})();
+let datos = {items:[],videos:[],fotos:{}};
+let enVivo = [];
+let primeraCarga = new Set();
+
+/* ---------- Textos ES / EN ---------- */
+const T = {
+ es:{},
+ en:{
+  actualizar:"Refresh", ultima:"BREAKING", envivo:"LIVE", sello:"Citizen watch · Vibras Positivas HM",
+  titulo:'Where did the <em>IDB loan money</em> go?',
+  bajada:"US$20 million lent by the Inter-American Development Bank and US$5.1 million in grants to modernize Colombia's public employment service. The result, according to today's Labor Ministry: platforms that don't work. It has now been reported to the Attorney General.",
+  c1:"IDB loan 4934/OC-CO", c2:"Non-reimbursable grants", c3:"Platforms questioned: Siemplea and CualifiCO", c4:"Bodies that received the complaint",
+  verhoy:"See today", pedir:"Demand answers", compartir:"Share",
+  hoyk:"Today in the case", cargando:"Loading",
+  d1:"days since the complaint (Oct 21, 2026)", d2:"days since Sanguino's resolution (Aug 6, 2026)", d3:"days since the program closed (Mar 30, 2026)",
+  "r-k":"The case in one minute", "r-t":"One loan, two platforms and a last-day signature",
+  aclara:'On social media the case circulates as "Sambino". The former minister is Antonio Sanguino, Labor Minister in the Petro government from February 2025 to August 2026.',
+  "l-k":"Timeline", "l-t":"From 2019 to the complaint",
+  "la-k":"Both sides", "la-t":"What the complaint says and what Sanguino answers", acusa:"The complaint", defiende:"The defense",
+  presuncion:"A complaint is not a conviction. Everyone mentioned is presumed innocent until a judge rules otherwise. This app tracks what is public and reminds each institution what is still pending.",
+  "p-k":"The money", "p-t":"US$25.1 million, broken down", b1:"IDB loan (repaid with interest)", b2:"Non-reimbursable grants",
+  k1:"Loan contract with the IDB — Program to Strengthen Employment Policies", k2:"Non-reimbursable financing agreement", k3:"Non-reimbursable financing agreement",
+  "p-nota":"With these codes any citizen can request information from the Labor Ministry, the Finance Ministry and the IDB.",
+  "v-k":"Still unknown", "v-t":"Open questions",
+  "vi-k":"Videos", "vi-t":"The case on video",
+  "n-k":"Archive", "n-t":"Every news story on the case",
+  "g-k":"Plain words", "g-t":"Key terms, made simple",
+  "a-k":"You can act too", "a-t":"Demand answers with a right-of-petition letter",
+  "a-p":"Fill in your details and the app writes the letter (in Spanish, as required). File it through the Labor Ministry's PQRSD channel (mintrabajo.gov.co). By law (Law 1755 of 2015) they must answer within 15 business days, or 10 business days for document requests.",
+  "f-nombre":"Full name", "f-cc":"ID number (cédula)", "f-ciudad":"City", "f-correo":"Email for the reply", copiar:"Copy letter", ir:"Go to MinTrabajo",
+  "fu-k":"Sources", "fu-t":"Where this information comes from",
+  robot:"News updates itself every 30 minutes with a robot that searches Google News, Bing News and YouTube.",
+  pie:"a citizen app by", pie2:"Public information with sources. Not affiliated with the IDB, the Labor Ministry or any party.",
+  anuncio:"Does your business need an app like this? Vibras Positivas HM builds it. vibraspositivashm.com — +57 311 770 0431",
+  filtro:"Search: Siemplea, Attorney General, Azure…"
+ }
+};
+const M = {
+ es:{hoyNada:"Hoy todavía no sale nada nuevo del caso. Esto es lo más reciente:", hoyHay:n=>`${n} noticia${n>1?"s":""} del caso hoy`, actual:"Actualizado", vivo:"Búsqueda en vivo", vivoOk:n=>n?`${n} resultado${n>1?"s":""} nuevo${n>1?"s":""} en vivo`:"Sin novedades en vivo", vivoMal:"Búsqueda en vivo no disponible ahora", robotT:"Robot", nuevo:"NUEVO", sinVideos:"El robot todavía no ha encontrado videos del caso. Apenas aparezcan, salen aquí solos.", sinRes:"No hay noticias con esa palabra.", copiado:"Carta copiada. Péguela en el formulario de MinTrabajo.", actualizando:"Buscando noticias nuevas…", listo:"Listo, todo al día.", hoy:"Hoy", hace:"hace", min:"min", h:"h", dias:"d"},
+ en:{hoyNada:"Nothing new on the case yet today. Here is the latest:", hoyHay:n=>`${n} stor${n>1?"ies":"y"} on the case today`, actual:"Updated", vivo:"Live search", vivoOk:n=>n?`${n} new live result${n>1?"s":""}`:"No live news", vivoMal:"Live search unavailable right now", robotT:"Robot", nuevo:"NEW", sinVideos:"The robot hasn't found videos of the case yet. They'll show up here automatically.", sinRes:"No news with that word.", copiado:"Letter copied. Paste it into the MinTrabajo form.", actualizando:"Looking for new stories…", listo:"Done, all up to date.", hoy:"Today", hace:"", min:"min ago", h:"h ago", dias:"d ago"}
+};
+const L = (es,en)=>({es,en});
+
+const RESUMEN = [
+ L("En 2020, durante el gobierno Duque, Colombia firmó con el BID un préstamo de US$20 millones (contrato 4934/OC-CO), más US$5,1 millones en cooperación que no se devuelve, para fortalecer las políticas de empleo. Con esa plata se iban a construir sistemas para el Servicio Público de Empleo.",
+   "In 2020, under the Duque government, Colombia signed a US$20 million loan with the IDB (contract 4934/OC-CO), plus US$5.1 million in grants, to strengthen employment policies. The money was meant to build systems for the Public Employment Service."),
+ L("De ahí salieron Siemplea, una plataforma de empleo con inteligencia artificial que Antonio Sanguino presentó en julio de 2025, y CualifiCO, para consultar formación y validar certificados.",
+   "That produced Siemplea, an AI job-matching platform Antonio Sanguino launched in July 2025, and CualifiCO, for checking training offers and validating certificates."),
+ L("El 6 de agosto de 2026, último día del gobierno Petro, Sanguino firmó una resolución que dio los sistemas por terminados y listos para usar, y ordenó subrogar al Ministerio en Microsoft Azure. El nuevo gobierno dice que no funcionan y el 21 de octubre lo denunció ante la Fiscalía, la Procuraduría y la Contraloría.",
+   "On August 6, 2026, the Petro government's last day, Sanguino signed a resolution declaring the systems finished and ready, and ordered the Ministry to take over the Microsoft Azure contract. The new government says they don't work, and on October 21 it reported the case to the Attorney General, the Inspector General and the Comptroller.")
+];
+
+const LINEA = [
+ ["2019-11-06",L("Se autoriza buscar el préstamo","Loan request authorized"),L("Resolución 4123: Hacienda y MinTrabajo pueden gestionar hasta US$20 millones para el Programa para Fortalecer Políticas de Empleo.","Resolution 4123 lets Finance and Labor seek up to US$20 million for the Program to Strengthen Employment Policies.")],
+ ["2020-01-29",L("Se autoriza firmar con el BID","Signing with the IDB authorized"),L("Resolución 0313 de MinHacienda autoriza el empréstito externo de US$20 millones con el BID.","Finance Ministry Resolution 0313 authorizes the US$20 million external loan with the IDB.")],
+ ["2020-03-30",L("Arranca el programa","The program starts"),L("Se firman el préstamo 4934/OC-CO y los convenios no reembolsables, y se crea la unidad coordinadora dentro de MinTrabajo.","Loan 4934/OC-CO and the grant agreements are signed, and a coordinating unit is created inside the Labor Ministry.")],
+ ["2025-02-18",L("Sanguino llega a MinTrabajo","Sanguino becomes Labor Minister"),L("Antonio Sanguino asume como ministro del Trabajo del gobierno Petro.","Antonio Sanguino takes office as Labor Minister in the Petro government.")],
+ ["2025-07-29",L("Se presenta Siemplea","Siemplea is launched"),L("Plataforma gratuita con inteligencia artificial. Prometían tenerla al público en el último trimestre de 2025.","A free AI platform, promised to the public for the last quarter of 2025.")],
+ ["2026-02-01",L("Revisión con el BID","Review with the IDB"),L("Según Sanguino, el BID y el Ministerio revisaron avances y acordaron implementarla de forma progresiva.","According to Sanguino, the IDB and the Ministry reviewed progress and agreed on a gradual rollout.")],
+ ["2026-03-30",L("Se cierra el programa financiero","Financial program closes"),L("Termina la operación del préstamo. MinTrabajo era el único ejecutor.","The loan operation ends. The Labor Ministry was the sole executing agency.")],
+ ["2026-06-30",L("Informe del auditor","Auditor's report"),L("Un auditor independiente certifica que las transacciones cumplieron las políticas fiduciarias del BID.","An independent auditor certifies the transactions met IDB fiduciary policies.")],
+ ["2026-08-06",L("La firma de último día","The last-day signature"),L("Sanguino firma la resolución que declara los sistemas listos para usar y ordena la subrogación automática en Microsoft Azure.","Sanguino signs the resolution declaring the systems ready and ordering automatic subrogation of the Microsoft Azure contract."),true],
+ ["2026-10-15",L("Diagnóstico técnico","Technical assessment"),L("El nuevo equipo concluye que el software está incompleto, inoperante y con fallas graves de seguridad.","The new team concludes the software is incomplete, inoperative and has serious security flaws."),true],
+ ["2026-10-21",L("Denuncia penal","Criminal complaint"),L("El secretario general de MinTrabajo, Eduardo Pineda Arrieta, radica la denuncia ante Fiscalía, Procuraduría y Contraloría.","Labor Ministry Secretary General Eduardo Pineda Arrieta files the complaint with the Attorney General, Inspector General and Comptroller."),true],
+ ["2026-10-22",L("El caso se vuelve viral","The case goes viral"),L("Cuentas de redes lo difunden como \"Sambino y el gobierno Petro bajo la lupa\".","Social media accounts spread it as \"Sambino and the Petro government under scrutiny\".")]
+];
+
+const ACUSA = [
+ L("Siemplea no tiene módulos de reportes, manejo de roles ni notificaciones.","Siemplea lacks reporting, role management and notification modules."),
+ L("La app móvil, el modo sin internet, la conexión con el motor de IA y la orientación ocupacional se aplazaron.","The mobile app, offline mode, AI-engine integration and career guidance were postponed."),
+ L("El código está desactualizado y la autenticación y la seguridad digital tienen vulnerabilidades graves.","The code is obsolete, and authentication and digital security have serious vulnerabilities."),
+ L("CualifiCO no funciona en sus perfiles de verificador y administrador, ni en varios módulos de solicitudes.","CualifiCO does not work for verifier and administrator profiles, nor in several request modules."),
+ L("La resolución del 6 de agosto comprometió el patrimonio del Ministerio con la subrogación en Azure y repartió plataformas inconclusas entre las áreas.","The Aug 6 resolution committed Ministry assets through the Azure subrogation and handed unfinished platforms to departments."),
+ L("Piden que un fiscal de la Unidad de Administración Pública investigue a exfuncionarios y contratistas.","They ask a Public Administration Unit prosecutor to investigate former officials and contractors.")
+];
+const DEFIENDE = [
+ L("Dice que se enteró de la denuncia por la prensa.","He says he learned of the complaint from the press."),
+ L("Todos los productos del crédito se aprobaron en el gobierno Duque.","All loan deliverables were approved under the Duque government."),
+ L("A él solo le tocó cerrar la operación, y el cierre se validó con el equipo del BID.","His role was only to close the operation, and the closing was validated with the IDB team."),
+ L("Los desembolsos siguieron el plan pactado cuando el hoy vicepresidente Restrepo era ministro de Hacienda.","Disbursements followed the plan agreed when current Vice President Restrepo was Finance Minister."),
+ L("Un auditor independiente certificó el cumplimiento fiduciario el 30 de junio de 2026.","An independent auditor certified fiduciary compliance on June 30, 2026."),
+ L("Asegura que el BID quedó tan satisfecho que ofreció un nuevo crédito.","He says the IDB was so satisfied it offered a new loan.")
+];
+const VIGILAR = [
+ L(["¿Abre la Fiscalía una indagación?","Hasta ahora solo se sabe que la denuncia llegó al despacho de la fiscal Luz Adriana Camargo."],["Will the Attorney General open an inquiry?","So far it is only known the complaint reached Attorney General Luz Adriana Camargo's office."]),
+ L(["¿Qué dicen la Contraloría y la Procuraduría?","Pueden abrir auditoría fiscal o investigación disciplinaria. No se conoce decisión pública."],["What do the Comptroller and Inspector General say?","They may open a fiscal audit or disciplinary inquiry. No public decision yet."]),
+ L(["¿Cuánto cuesta Azure al mes?","La subrogación hace que el Ministerio pague la nube. Ese valor no se ha publicado."],["How much does Azure cost per month?","The subrogation makes the Ministry pay for the cloud. That amount hasn't been published."]),
+ L(["¿Quiénes fueron los contratistas?","La denuncia habla de contratistas, pero sus nombres no se han hecho públicos."],["Who were the contractors?","The complaint mentions contractors, but their names haven't been made public."]),
+ L(["¿Qué dice el BID?","El banco aún no se ha pronunciado públicamente sobre la denuncia."],["What does the IDB say?","The bank has not publicly commented on the complaint yet."]),
+ L(["¿Se puede rescatar Siemplea?","Falta saber si el Ministerio la arreglará, la reemplazará o la apagará."],["Can Siemplea be saved?","It remains unclear whether the Ministry will fix, replace or shut it down."])
+];
+const GLOSARIO = [
+ L(["Préstamo vs. cooperación","El préstamo (US$20 millones) se devuelve con intereses, con plata de todos. La cooperación no reembolsable (US$5,1 millones) es una donación."],["Loan vs. grant","The loan (US$20M) is repaid with interest, with public money. The non-reimbursable grant (US$5.1M) is a donation."]),
+ L(["Elefante blanco","Obra o sistema que costó mucho y no sirve o no se usa."],["White elephant","A costly project or system that doesn't work or isn't used."]),
+ L(["Subrogación en Azure","El Ministerio queda en el lugar del contratista en el contrato de la nube de Microsoft: asume sus pagos y obligaciones."],["Azure subrogation","The Ministry steps into the contractor's place in the Microsoft cloud contract, taking over its payments and obligations."]),
+ L(["Organismo ejecutor","Quien maneja la plata y responde por ella. Aquí era solo el Ministerio del Trabajo."],["Executing agency","Whoever manages the money and answers for it. Here, only the Labor Ministry."]),
+ L(["Deuda técnica","Fallas y atajos en el software que tarde o temprano hay que pagar arreglándolos."],["Technical debt","Software flaws and shortcuts that sooner or later must be paid for by fixing them."]),
+ L(["Derecho de petición","Su derecho a pedirle información a cualquier entidad pública. Es gratis y no necesita abogado."],["Right of petition","Your right to request information from any public body. Free, no lawyer needed."])
+];
+
+/* ---------- Utilidades ---------- */
+const $ = s=>document.querySelector(s);
+const t = o=>o[idioma]||o.es;
+const ahoraBog = ()=>new Date();
+const fechaBog = d=>new Intl.DateTimeFormat("en-CA",{timeZone:TZ,year:"numeric",month:"2-digit",day:"2-digit"}).format(d);
+const esc = s=>String(s||"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function fechaBonita(iso){
+  const d=new Date(iso); if(isNaN(d))return"";
+  const min=Math.round((Date.now()-d)/60000), m=M[idioma];
+  if(min>=0&&min<60) return idioma==="es"?`${m.hace} ${Math.max(min,1)} ${m.min}`:`${Math.max(min,1)} ${m.min}`;
+  if(min>=60&&min<1440){const h=Math.round(min/60);return idioma==="es"?`${m.hace} ${h} ${m.h}`:`${h} ${m.h}`}
+  return new Intl.DateTimeFormat(idioma==="es"?"es-CO":"en-US",{timeZone:TZ,day:"numeric",month:"short",year:"numeric",hour:"numeric",minute:"2-digit"}).format(d);
+}
+function diasDesde(iso){
+  const a=new Date(fechaBog(new Date(iso+"T12:00:00-05:00"))+"T00:00:00Z"), b=new Date(fechaBog(new Date())+"T00:00:00Z");
+  return Math.round((b-a)/86400000);
+}
+function aviso(txt){const a=$("#aviso");a.textContent=txt;a.classList.add("ver");clearTimeout(a._t);a._t=setTimeout(()=>a.classList.remove("ver"),3200)}
+function esDelCaso(txt){
+  const s=txt.toLowerCase();
+  if(/siemplea|cualifico|4934\/oc-co/.test(s))return true;
+  const bid=/\bbid\b|banco interamericano/.test(s), trab=/mintrabajo|ministerio del trabajo|ministerio de trabajo|sanguino/.test(s);
+  const lio=/elefante blanco|denuncia|fiscal|contralor|procurad|préstamo|prestamo|crédito|credito|azure/.test(s);
+  return (bid&&trab)||(s.includes("sanguino")&&lio&&(bid||s.includes("plataforma")));
+}
+const claveT = s=>s.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/[^a-z0-9 ]/g,"").replace(/\s+/g," ").trim().slice(0,90);
+
+/* ---------- Idioma ---------- */
+function aplicarIdioma(){
+  document.documentElement.lang=idioma;
+  $("#btn-idioma").textContent=idioma==="es"?"EN":"ES";
+  document.querySelectorAll("[data-t]").forEach(el=>{
+    if(!el.dataset.es) el.dataset.es=el.innerHTML;
+    const k=el.dataset.t; el.innerHTML = idioma==="en"&&T.en[k]?T.en[k]:el.dataset.es;
+  });
+  document.querySelectorAll("[data-tp]").forEach(el=>{
+    if(!el.dataset.es) el.dataset.es=el.placeholder;
+    el.placeholder = idioma==="en"?T.en[el.dataset.tp]:el.dataset.es;
+  });
+  pintarFijos(); pintarNoticias(); pintarHoyCab();
+}
+
+/* ---------- Secciones fijas ---------- */
+function pintarFijos(){
+  $("#resumen-texto").innerHTML=RESUMEN.map(p=>`<p>${esc(t(p))}</p>`).join("");
+  const fmt=new Intl.DateTimeFormat(idioma==="es"?"es-CO":"en-US",{day:"numeric",month:"short",year:"numeric",timeZone:"UTC"});
+  $("#linea-lista").innerHTML=LINEA.map(([f,ti,tx,clave])=>{
+    const etiqueta = f==="2026-02-01"?(idioma==="es"?"feb. 2026":"Feb 2026"):f==="2020-03-30"?"2020":fmt.format(new Date(f+"T12:00:00Z"));
+    return `<div class="hito${clave?" clave":""}"><div class="f">${etiqueta}</div><h4>${esc(t(ti))}</h4><p>${esc(t(tx))}</p></div>`}).join("");
+  $("#lista-acusa").innerHTML=ACUSA.map(x=>`<li>${esc(t(x))}</li>`).join("");
+  $("#lista-defensa").innerHTML=DEFIENDE.map(x=>`<li>${esc(t(x))}</li>`).join("");
+  $("#vigilar-lista").innerHTML=VIGILAR.map((x,i)=>{const [h,p]=t(x);return `<div class="pendiente"><div class="n">${String(i+1).padStart(2,"0")}</div><div><h4>${esc(h)}</h4><p>${esc(p)}</p><span class="chip rojo" style="margin-top:8px;display:inline-block">${idioma==="es"?"Pendiente":"Pending"}</span></div></div>`}).join("");
+  $("#glosario-lista").innerHTML=GLOSARIO.map(x=>{const [b,p]=t(x);return `<div class="termino"><b>${esc(b)}</b><p>${esc(p)}</p></div>`}).join("");
+  observar();
+}
+
+/* ---------- Noticias ---------- */
+function todas(){
+  const mapa=new Map();
+  [...enVivo,...(datos.items||[])].forEach(n=>{const k=claveT(n.titulo); if(!mapa.has(k)) mapa.set(k,n); else if(!mapa.get(k).imagen&&n.imagen) mapa.get(k).imagen=n.imagen;});
+  return [...mapa.values()].sort((a,b)=>new Date(b.fecha)-new Date(a.fecha));
+}
+const fotosRespaldo=()=>Object.values(datos.fotos||{}).filter(Boolean);
+function tarjeta(n,i,grande){
+  const resp=fotosRespaldo(); const img=n.imagen||resp[i%Math.max(resp.length,1)]||"";
+  const esNuevo = n._vivo || (Date.now()-new Date(n.fecha))<6*3600000;
+  const imgHtml = img
+    ? `<div class="img" style="background-image:url('${esc(img)}')"><span class="fuente">${esc(n.fuente)}</span>${esNuevo?`<span class="nuevo">${M[idioma].nuevo}</span>`:""}</div>`
+    : `<div class="img sin">${esNuevo?`<span class="nuevo">${M[idioma].nuevo}</span>`:""}<span>${esc(n.fuente)}</span></div>`;
+  return `<a class="tarjeta${grande?" grande":""}" href="${esc(n.enlace)}" target="_blank" rel="noopener">${imgHtml}<div class="cuerpo"><h3>${esc(n.titulo)}</h3>${n.resumen?`<p>${esc(n.resumen)}</p>`:""}<div class="fecha">${fechaBonita(n.fecha)}</div></div></a>`;
+}
+function pintarNoticias(){
+  const lista=todas(); const hoy=fechaBog(new Date());
+  const deHoy=lista.filter(n=>fechaBog(new Date(n.fecha))===hoy);
+  const mostrar = deHoy.length?deHoy:lista.slice(0,3);
+  $("#hoy-lista").innerHTML = mostrar.map((n,i)=>tarjeta(n,i,i===0&&mostrar.length!==2)).join("");
+  const est=$("#estado");
+  est.innerHTML = `<span class="chip ${deHoy.length?"rojo":"oro"}">${deHoy.length?M[idioma].hoyHay(deHoy.length):M[idioma].hoy}</span><span>${deHoy.length?"":M[idioma].hoyNada}</span>`
+   + (datos.actualizado?`<span class="chip">${M[idioma].robotT}: ${fechaBonita(datos.actualizado)}</span>`:"")
+   + (est.dataset.vivo?`<span class="chip ${est.dataset.vivoOk==="1"?"verde":""}">${est.dataset.vivo==="ok"?M[idioma].vivoOk(+est.dataset.vivoN):M[idioma].vivoMal}</span>`:"");
+  filtrar();
+  // Ticker
+  const tit=lista.slice(0,10).map(n=>`<span>${esc(n.fuente).toUpperCase()} — ${esc(n.titulo)}</span>`).join("");
+  $("#pista").innerHTML=tit||"<span>…</span>";
+  // Videos
+  const v=datos.videos||[];
+  $("#videos-lista").innerHTML = v.length ? v.map(x=>`<div class="video" data-id="${esc(x.id)}"><img loading="lazy" src="https://i.ytimg.com/vi/${esc(x.id)}/hqdefault.jpg" alt=""><div class="play"></div><div class="t">${esc(x.titulo)}</div></div>`).join("") : `<div class="vacio" style="grid-column:1/-1">${M[idioma].sinVideos}</div>`;
+  $("#pie-actualizado").textContent = datos.actualizado?`${M[idioma].actual}: ${fechaBonita(datos.actualizado)} (${idioma==="es"?"hora Colombia":"Colombia time"})`:"";
+  fotosPortada();
+  observar();
+}
+function filtrar(){
+  const q=($("#filtro").value||"").toLowerCase().trim();
+  const lista=todas().filter(n=>!q||`${n.titulo} ${n.resumen} ${n.fuente}`.toLowerCase().includes(q));
+  $("#todas-lista").innerHTML = lista.length?lista.map((n,i)=>tarjeta(n,i+1,false)).join(""):`<div class="vacio" style="grid-column:1/-1">${M[idioma].sinRes}</div>`;
+  observar();
+}
+
+/* ---------- Fotos de portada (reales: noticias y Wikipedia) ---------- */
+let rot=0, fotosLista=[];
+function fotosPortada(){
+  const nuevas=[...todas().map(n=>n.imagen).filter(Boolean).slice(0,6),...fotosRespaldo()];
+  if(nuevas.join()===fotosLista.join())return;
+  fotosLista=nuevas;
+  if(fotosLista.length){ $("#foto1").style.backgroundImage=`url('${fotosLista[0]}')`; $("#foto1").classList.add("activa"); }
+  const fr=datos.fotos&&datos.fotos.bid||fotosLista[0];
+  if(fr) $("#foto-resumen").style.backgroundImage=`url('${fr}')`;
+}
+setInterval(()=>{
+  if(fotosLista.length<2)return;
+  rot=(rot+1)%fotosLista.length;
+  const [a,b]=rot%2?["#foto2","#foto1"]:["#foto1","#foto2"];
+  $(a).style.backgroundImage=`url('${fotosLista[rot]}')`; $(a).classList.add("activa"); $(b).classList.remove("activa");
+},7000);
+
+async function fotosWikipedia(){
+  if(datos.fotos&&datos.fotos.bid)return;
+  try{
+    const r=await fetch("https://es.wikipedia.org/api/rest_v1/page/summary/Banco_Interamericano_de_Desarrollo");
+    const j=await r.json(); const src=(j.originalimage||j.thumbnail||{}).source;
+    if(src){datos.fotos={...(datos.fotos||{}),bid:src}; fotosLista=[]; fotosPortada(); filtrar();}
+  }catch(e){}
+}
+
+/* ---------- Carga de datos ---------- */
+async function cargarDatos(){
+  try{
+    const r=await fetch("data/noticias.json?v="+Date.now(),{cache:"no-store"});
+    if(r.ok) datos=await r.json();
+  }catch(e){}
+  pintarNoticias();
+}
+
+/* ---------- Búsqueda en vivo al abrir ---------- */
+const PROXIES=[u=>"https://api.allorigins.win/raw?url="+encodeURIComponent(u), u=>"https://corsproxy.io/?url="+encodeURIComponent(u)];
+async function rssEnVivo(q){
+  const url=`https://news.google.com/rss/search?q=${encodeURIComponent(q)}&hl=es-419&gl=CO&ceid=CO:es-419`;
+  for(const p of PROXIES){
+    try{
+      const ctrl=new AbortController(); const tm=setTimeout(()=>ctrl.abort(),9000);
+      const r=await fetch(p(url),{signal:ctrl.signal}); clearTimeout(tm);
+      if(!r.ok)continue;
+      const xml=new DOMParser().parseFromString(await r.text(),"text/xml");
+      return [...xml.querySelectorAll("item")].map(it=>{
+        const fuente=it.querySelector("source")?.textContent||"Prensa";
+        let titulo=it.querySelector("title")?.textContent||"";
+        if(titulo.endsWith(" - "+fuente)) titulo=titulo.slice(0,-(fuente.length+3));
+        return {titulo,enlace:it.querySelector("link")?.textContent||"",fuente,fecha:new Date(it.querySelector("pubDate")?.textContent||Date.now()).toISOString(),imagen:"",resumen:"",_vivo:true};
+      });
+    }catch(e){}
+  }
+  throw new Error("sin proxy");
+}
+async function buscarEnVivo(){
+  const est=$("#estado"); const antes=new Set(todas().map(n=>claveT(n.titulo)));
+  const res=await Promise.allSettled(["Siemplea","Sanguino BID préstamo","Mintrabajo elefante blanco BID","CualifiCO"].map(rssEnVivo));
+  const ok=res.filter(r=>r.status==="fulfilled");
+  if(!ok.length){est.dataset.vivo="mal"; est.dataset.vivoOk="0"; pintarNoticias(); return;}
+  const items=ok.flatMap(r=>r.value).filter(n=>esDelCaso(n.titulo)&&n.enlace);
+  const nuevos=items.filter(n=>!antes.has(claveT(n.titulo)));
+  enVivo=[...nuevos,...enVivo];
+  est.dataset.vivo="ok"; est.dataset.vivoN=nuevos.length; est.dataset.vivoOk="1";
+  pintarNoticias();
+}
+
+/* ---------- Hoy: fecha y reloj ---------- */
+function pintarHoyCab(){
+  const d=new Date();
+  $("#hoy-fecha").textContent=new Intl.DateTimeFormat(idioma==="es"?"es-CO":"en-US",{timeZone:TZ,weekday:"long",day:"numeric",month:"long",year:"numeric"}).format(d);
+  $("#reloj").textContent=new Intl.DateTimeFormat("es-CO",{timeZone:TZ,hour:"2-digit",minute:"2-digit",second:"2-digit",hour12:true}).format(d)+" COL";
+  $("#d-denuncia").textContent=diasDesde("2026-10-21");
+  $("#d-resolucion").textContent=diasDesde("2026-08-06");
+  $("#d-cierre").textContent=diasDesde("2026-03-30");
+}
+setInterval(pintarHoyCab,1000);
+
+/* ---------- Animaciones ---------- */
+let io;
+function observar(){
+  if(!("IntersectionObserver" in window)){document.querySelectorAll(".tarjeta,.hito").forEach(e=>e.classList.add("visible"));return}
+  io=io||new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");io.unobserve(e.target)}}),{threshold:.08});
+  document.querySelectorAll(".tarjeta:not(.visible),.hito:not(.visible)").forEach(e=>io.observe(e));
+}
+function contar(){
+  document.querySelectorAll("[data-contar]").forEach(el=>{
+    const fin=parseFloat(el.dataset.contar), dec=+(el.dataset.dec||0), pre=el.dataset.pre||"", suf=el.dataset.suf||"", t0=performance.now();
+    const paso=now=>{const p=Math.min((now-t0)/1600,1), v=fin*(1-Math.pow(1-p,3));
+      el.textContent=pre+v.toLocaleString(idioma==="es"?"es-CO":"en-US",{minimumFractionDigits:dec,maximumFractionDigits:dec})+suf; if(p<1)requestAnimationFrame(paso)};
+    requestAnimationFrame(paso);
+  });
+}
+const ioBarras=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.querySelectorAll(".lleno").forEach(b=>b.style.width=b.dataset.ancho+"%")}}),{threshold:.3});
+ioBarras.observe($("#plata"));
+
+/* ---------- Derecho de petición ---------- */
+function carta(){
+  const v=id=>($(id).value||"").trim();
+  const hoy=new Intl.DateTimeFormat("es-CO",{timeZone:TZ,day:"numeric",month:"long",year:"numeric"}).format(new Date());
+  $("#texto-peticion").value=
+`${v("#p-ciudad")||"[Ciudad]"}, ${hoy}
+
+Señores
+MINISTERIO DEL TRABAJO
+Secretaría General
+Bogotá D.C.
+
+Asunto: Derecho de petición de información — Préstamo BID 4934/OC-CO, Siemplea y CualifiCO
+
+Yo, ${v("#p-nombre")||"[Nombre completo]"}, identificado(a) con cédula de ciudadanía ${v("#p-cc")||"[número]"}, en ejercicio del derecho fundamental de petición (artículo 23 de la Constitución Política y Ley 1755 de 2015), respetuosamente solicito:
+
+1. Copia de la resolución expedida el 6 de agosto de 2026 por el entonces ministro Antonio Sanguino, que declaró los desarrollos tecnológicos del programa listos para su explotación ordinaria.
+2. Copia del diagnóstico técnico del 15 de octubre de 2026 sobre el estado de Siemplea y CualifiCO.
+3. Copia del informe de aseguramiento del auditor independiente del 30 de junio de 2026.
+4. Relación de los contratos financiados con el préstamo 4934/OC-CO y los convenios no reembolsables 4935/GR-CO y GRT/CF-17823-CO: contratista, objeto, valor, fecha y estado.
+5. Valor mensual y total que el Ministerio paga o pagará por Microsoft Azure como consecuencia de la subrogación ordenada, y fecha de vencimiento de ese contrato.
+6. Estado actual de Siemplea y CualifiCO: qué funciona hoy, cuántos ciudadanos la usan y cuál es el plan del Ministerio (arreglo, reemplazo o cierre).
+7. Número de radicado de la denuncia presentada el 21 de octubre de 2026 ante la Fiscalía, la Procuraduría y la Contraloría.
+
+Solicito que la respuesta se entregue dentro del término legal de diez (10) días hábiles para solicitudes de documentos e información, al correo ${v("#p-correo")||"[correo electrónico]"}.
+
+Atentamente,
+
+${v("#p-nombre")||"[Nombre completo]"}
+C.C. ${v("#p-cc")||"[número]"}
+${v("#p-correo")||"[correo electrónico]"}`;
+}
+["#p-nombre","#p-cc","#p-ciudad","#p-correo"].forEach(id=>$(id).addEventListener("input",carta));
+$("#btn-copiar").addEventListener("click",async()=>{
+  carta(); const tx=$("#texto-peticion").value;
+  try{await navigator.clipboard.writeText(tx)}catch(e){$("#texto-peticion").select();document.execCommand("copy")}
+  aviso(M[idioma].copiado);
+});
+
+/* ---------- Botones ---------- */
+$("#btn-idioma").addEventListener("click",()=>{idioma=idioma==="es"?"en":"es";try{localStorage.setItem("idioma",idioma)}catch(e){};aplicarIdioma();contar()});
+$("#btn-actualizar").addEventListener("click",async()=>{
+  const b=$("#btn-actualizar"); b.classList.add("girando"); aviso(M[idioma].actualizando);
+  await cargarDatos(); await buscarEnVivo(); b.classList.remove("girando"); aviso(M[idioma].listo);
+});
+$("#btn-compartir").addEventListener("click",async()=>{
+  const d={title:"Préstamo BID al Día",text:idioma==="es"?"¿Dónde quedó la plata del préstamo del BID? Seguimiento día a día:":"Where did the IDB loan money go? Daily tracker:",url:location.href};
+  if(navigator.share){try{await navigator.share(d)}catch(e){}}else{try{await navigator.clipboard.writeText(d.text+" "+d.url);aviso(idioma==="es"?"Enlace copiado":"Link copied")}catch(e){}}
+});
+$("#filtro").addEventListener("input",filtrar);
+document.addEventListener("click",e=>{
+  const v=e.target.closest(".video"); if(!v||v.querySelector("iframe"))return;
+  v.innerHTML=`<iframe src="https://www.youtube-nocookie.com/embed/${v.dataset.id}?autoplay=1&rel=0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`;
+});
+document.addEventListener("visibilitychange",()=>{if(!document.hidden){pintarHoyCab();cargarDatos()}});
+
+/* ---------- Arranque ---------- */
+aplicarIdioma(); carta(); contar();
+cargarDatos().then(()=>{buscarEnVivo(); fotosWikipedia();});
+setInterval(cargarDatos,10*60*1000);
+if("serviceWorker" in navigator) addEventListener("load",()=>navigator.serviceWorker.register("sw.js").catch(()=>{}));
+</script>
+</body>
+</html>
