@@ -360,7 +360,7 @@ footer a{color:var(--oro)}
   <div class="contenedor">
     <div class="kicker" data-t="a-k">Usted también puede</div>
     <h2 data-t="a-t">Pida cuentas con un derecho de petición</h2>
-    <p style="margin-bottom:18px;max-width:760px" data-t="a-p">Escriba sus datos y toque Enviar por correo: se abre su correo con la carta lista para el Ministerio del Trabajo (solucionesdocumentales@mintrabajo.gov.co). Guarde la respuesta automática con el número de radicado. Por ley (Ley 1755 de 2015) deben responder en 15 días hábiles, y en 10 días hábiles si lo que pide son documentos.</p>
+    <p style="margin-bottom:18px;max-width:760px" data-t="a-p">Escriba sus datos y toque Enviar por correo: se abre su correo con la carta lista para el Ministerio del Trabajo (solucionesdocumental@mintrabajo.gov.co). Guarde la respuesta automática con el número de radicado. Por ley (Ley 1755 de 2015) deben responder en 15 días hábiles, y en 10 días hábiles si lo que pide son documentos.</p>
     <div class="peticion">
       <div class="form">
         <label data-t="f-nombre">Nombre completo</label><input id="p-nombre" autocomplete="name">
@@ -436,7 +436,7 @@ const T = {
   "n-k":"Archive", "n-t":"Every news story on the case",
   "g-k":"Plain words", "g-t":"Key terms, made simple",
   "a-k":"You can act too", "a-t":"Demand answers with a right-of-petition letter",
-  "a-p":"Fill in your details and tap Send by email: your mail app opens with the letter (in Spanish) addressed to the Labor Ministry (solucionesdocumentales@mintrabajo.gov.co). Keep the automatic reply with your filing number. By law (Law 1755 of 2015) they must answer within 15 business days, or 10 business days for document requests.",
+  "a-p":"Fill in your details and tap Send by email: your mail app opens with the letter (in Spanish) addressed to the Labor Ministry (solucionesdocumental@mintrabajo.gov.co). Keep the automatic reply with your filing number. By law (Law 1755 of 2015) they must answer within 15 business days, or 10 business days for document requests.",
   "f-nombre":"Full name", "f-cc":"ID number (cédula)", "f-ciudad":"City", "f-correo":"Email for the reply", copiar:"Copy letter", correo:"Send by email", ir:"Go to MinTrabajo",
   "fu-k":"Sources", "fu-t":"Where this information comes from",
   robot:"News updates itself every 30 minutes with a robot that searches Google News, Bing News and YouTube.",
@@ -740,7 +740,7 @@ $("#btn-copiar").addEventListener("click",async()=>{
 $("#btn-correo").addEventListener("click",()=>{
   if(!$("#p-nombre").value.trim()||!$("#p-cc").value.trim()){aviso(M[idioma].faltan);($("#p-nombre").value.trim()?$("#p-cc"):$("#p-nombre")).focus();return}
   carta();
-  const para="solucionesdocumentales@mintrabajo.gov.co", cc="notificacionesjudiciales@mintrabajo.gov.co";
+  const para="solucionesdocumental@mintrabajo.gov.co", cc="notificacionesjudiciales@mintrabajo.gov.co";
   const asunto="Derecho de petición de información - Préstamo BID 4934/OC-CO, Siemplea y CualifiCO";
   aviso(M[idioma].abriendo);
   location.href=`mailto:${para}?cc=${cc}&subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent($("#texto-peticion").value)}`;
