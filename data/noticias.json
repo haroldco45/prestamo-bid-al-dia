@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-11T09:41:37.309Z",
+  "actualizado": "2026-11-11T17:38:49.057Z",
   "items": [
     {
       "titulo": "Siemplea, el proyecto digital para buscar empleo, que el Gobierno Petro no sacó adelante y que hoy está bajo la lupa",
@@ -66,7 +66,16 @@
       "resumen": "En el Encuentro Nacional de Prestadores del Servicio Público de Empleo, realizado en Cali, el ministro de Trabajo, Antonio Sanguino, presentó oficialmente Siemplea, la nueva plataforma pública de ..."
     }
   ],
-  "videos": [],
+  "videos": [
+    {
+      "id": "BJ-U5IP2P70",
+      "titulo": "Familiares del ministro Sanguino habrían recibido más de $1.000 millones en contratos"
+    },
+    {
+      "id": "209WSSIdtwA",
+      "titulo": "Las denuncias de Constreñimiento Electoral del Ministro de Trabajo Antonio Sanguino."
+    }
+  ],
   "fotos": {
     "bid": "https://upload.wikimedia.org/wikipedia/commons/6/68/1300_NY_Ave_IDB_DCA_07_2018_9880.jpg?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
     "mintrabajo": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/3f/Logo_Ministerio_del_Trabajo_Colombia.svg/langes-960px-Logo_Ministerio_del_Trabajo_Colombia.svg.png?utm_source=es.wikipedia.org&utm_campaign=api&utm_content=thumbnail",
